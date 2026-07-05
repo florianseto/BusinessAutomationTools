@@ -269,5 +269,5 @@ https://github.com/florianseto
 
 Developed by Florian Seto.
 
-GitHub:
+GitHub Profile:
 https://github.com/florianseto
