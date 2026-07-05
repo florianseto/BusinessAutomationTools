@@ -232,19 +232,19 @@ Project001_CSVBusinessFormatter
 
 ### 日本語
 
-|Version|内容|
-|---------|-------------|
-|v0.1.0|README作成・プロジェクト初期構成作成|
-|v0.2.0|要求定義書作成予定|
-|v0.3.0|基本設計書作成予定|
+| Version|内容|
+| --------- | ------------- |
+| v0.1.0 | README作成・プロジェクト初期構成作成 |
+| v0.2.0 | 要求定義書作成予定 |
+| v0.3.0 | 基本設計書作成予定 |
 
 ### English
 
-|Version|Description|
-|---------|-------------|
-|v0.1.0|Created README and initial project structure|
-|v0.2.0|Planned requirements document|
-|v0.3.0|Planned basic design document|
+| Version | Description |
+| --------- | ------------- |
+| v0.1.0 | Created README and initial project structure |
+| v0.2.0 | Planned requirements document |
+| v0.3.0 | Planned basic design document |
 
 ## License（ライセンス）
 
@@ -262,7 +262,7 @@ This project is planned to use the MIT License.
 
 Florian Seto
 
-GitHub:
+GitHub Profile:
 https://github.com/florianseto
 
 ### English
