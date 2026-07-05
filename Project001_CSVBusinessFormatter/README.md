@@ -10,15 +10,15 @@ This project is a Python-based business automation tool that converts CSV files 
 
 ### 日本語
 
-CSVデータの取り込み、整形、Excel出力を自動化することで、日々の集計・確認・転記作業を効率化することを目的としています。
+Project001はBusiness Automation Toolsシリーズの第一弾です。
 
-このツールは、Business Automation Tools シリーズの第1弾として作成します。
+CSVデータの取り込み、整形、Excel出力を自動化し、業務改善を目的としたPythonツールとして開発します。
 
 ### English
 
-This project aims to automate CSV import, data formatting, and Excel report generation to reduce repetitive manual work.
+Project001 is the first project in the Business Automation Tools series.
 
-This tool is the first project in the Business Automation Tools series.
+It automates CSV processing and Excel report generation to improve business workflows.
 
 ---
 
@@ -152,11 +152,11 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### 日本語
 
-現在は要求定義・設計フェーズです。
+🟡 要求定義・設計フェーズ
 
 ### English
 
-This project is currently in the requirements and design phase.
+🟡 Requirements & Design Phase
 
 ---
 
@@ -202,19 +202,15 @@ This project is currently in the requirements and design phase.
 
 ## Folder Structure（フォルダ構成）
 
+```text
 Project001_CSVBusinessFormatter
-
 ├── docs
-
 ├── sample
-
 ├── src
-
 ├── tests
-
 ├── output
-
 └── README.md
+```
 
 ### 日本語
 
@@ -236,17 +232,19 @@ Project001_CSVBusinessFormatter
 
 ### 日本語
 
-Version    内容
-v0.1.0     README作成・プロジェクト初期構成作成
-v0.2.0     要求定義書作成予定
-v0.3.0     基本設計書作成予定
+|Version|内容|
+|---------|-------------|
+|v0.1.0|README作成・プロジェクト初期構成作成|
+|v0.2.0|要求定義書作成予定|
+|v0.3.0|基本設計書作成予定|
 
 ### English
 
-Version    Description
-v0.1.0     Created README and initial project structure
-v0.2.0     Planned requirements document
-v0.3.0     Planned basic design document
+|Version|Description|
+|---------|-------------|
+|v0.1.0|Created README and initial project structure|
+|v0.2.0|Planned requirements document|
+|v0.3.0|Planned basic design document|
 
 ## License（ライセンス）
 
@@ -258,3 +256,18 @@ v0.3.0     Planned basic design document
 
 This project is planned to use the MIT License.
 
+## Author（作者）
+
+### 日本語
+
+Florian Seto
+
+GitHub:
+https://github.com/florianseto
+
+### English
+
+Developed by Florian Seto.
+
+GitHub:
+https://github.com/florianseto
