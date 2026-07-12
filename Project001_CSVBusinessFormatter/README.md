@@ -43,108 +43,78 @@ It aims to reduce human errors and shorten the time required for checking and re
 ### 日本語
 
 - CSVファイルを日常的に扱う方
-
 - Excelで集計・確認作業を行う方
-
 - 製造業、事務、営業、経理、総務などの担当者
-
 - 手作業による転記・集計を減らしたい方
-
 - 小規模な業務改善ツールを必要としている方
 
 ### English
 
 - People who regularly work with CSV files
-
 - Users who perform checking and reporting tasks in Excel
-
 - Staff in manufacturing, administration, sales, accounting, or general affairs
-
 - Users who want to reduce manual copy-and-paste or aggregation work
-
 - Users who need small business automation tools
 
 ---
 
-## Planned Features（予定機能）
+## Features and Implementation Status（機能・実装状況）
 
 ### CSV Processing（CSV処理）
 
 #### 日本語
 
-- CSVファイルの読み込み
-
-- エンコードの自動判定
-
-- データ整形
-
-- 不要列の削除
-
-- 列名変更
-
-- 列の並び替え
+- [x] CSVファイルの読み込み
+- [x] UTF-8およびCP932による自動再試行
+- [x] データ整形
+- [x] 不要列の削除
+- [x] 列名変更
+- [x] 列の並び替え
 
 #### English
 
-- Import CSV files
-
-- Automatically detect file encoding
-
-- Format data
-
-- Remove unnecessary columns
-
-- Rename columns
-
-- Reorder columns
+- [x] Import CSV files
+- [x] Automatically retry with UTF-8 and CP932 encodings
+- [x] Format data
+- [x] Remove unnecessary columns
+- [x] Rename columns
+- [x] Reorder columns
 
 ### Excel Output（Excel出力）
 
 #### 日本語
 
-- Excelファイルへの出力
-
-- 集計シートの作成
-
-- シート名の自動設定
-
-- 基本的な書式設定
-
-- 出力ファイルの保存
+- [x] Excelファイルへの出力
+- [ ] 集計シートの作成
+- [x] シート名の設定
+- [ ] 基本的な書式設定
+- [x] 出力フォルダの自動作成
+- [x] 日時付き出力ファイル名での保存
 
 #### English
 
-- Export data to Excel files
-
-- Generate summary sheets
-
-- Automatically set sheet names
-
-- Apply basic formatting
-
-- Save output files
+- [x] Export data to Excel files
+- [ ] Generate summary sheets
+- [x] Set sheet names
+- [ ] Apply basic formatting
+- [x] Automatically create the output folder
+- [x] Save output files with timestamped names
 
 ### Logging（ログ出力）
 
 #### 日本語
 
-- 処理結果のログ出力
-
-- エラー内容の記録
-
-- 入力ファイル名・出力ファイル名の記録
-
-- 処理日時の記録
+- [x] 処理状況およびエラーを記録するログ処理
+- [x] 入力ファイル名・出力ファイル名のログ記録
+- [x] ターミナルへのログ出力
+- [x] 日時付きログファイルへの保存
 
 #### English
 
-- Output processing logs
-
-- Record error details
-
-- Record input and output file names
-
-- Record processing date and time
+- [x] Log processing status and errors
+- [x] Record input and output file names in logs
+- [x] Output logs to the terminal
+- [x] Save logs to timestamped log files
 
 ---
 
@@ -152,11 +122,15 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### 日本語
 
-🟡 要求定義・設計フェーズ
+🟡 基本機能実装済み・テスト準備フェーズ
+
+CSV読み込み、データ整形、Excel出力、ログ出力までの基本処理を実装済みです。現在は自動テストと出力機能の拡充を予定しています。
 
 ### English
 
-🟡 Requirements & Design Phase
+🟡 Core Features Implemented / Preparing for Testing
+
+The basic workflow for CSV import, data formatting, Excel export, and logging has been implemented. Automated testing and output enhancements are planned next.
 
 ---
 
@@ -164,38 +138,24 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### 日本語
 
-- [ ] 要求定義
-
-- [ ] 基本設計
-
-- [ ] CSV読み込み機能
-
-- [ ] データ整形機能
-
-- [ ] Excel出力機能
-
-- [ ] ログ出力機能
-
+- [x] 要求定義
+- [x] 基本設計
+- [x] CSV読み込み機能
+- [x] データ整形機能
+- [x] Excel出力機能
+- [x] ログ出力機能
 - [ ] テスト
-
 - [ ] v1.0 リリース
 
 ### English
 
-- [ ] Requirements definition
-
-- [ ] Basic design
-
-- [ ] CSV import feature
-
-- [ ] Data formatting feature
-
-- [ ] Excel export feature
-
-- [ ] Logging feature
-
+- [x] Requirements definition
+- [x] Basic design
+- [x] CSV import feature
+- [x] Data formatting feature
+- [x] Excel export feature
+- [x] Logging feature
 - [ ] Testing
-
 - [ ] v1.0 release
 
 ---
@@ -206,45 +166,57 @@ It aims to reduce human errors and shorten the time required for checking and re
 Project001_CSVBusinessFormatter
 ├── docs
 ├── sample
+│   └── input
 ├── src
 ├── tests
+├── logs
 ├── output
 └── README.md
 ```
 
 ### 日本語
 
-* docs：要求定義書、設計書などを管理
-* sample：サンプルCSVや出力例を管理
-* src：Pythonソースコードを管理
-* tests：テストコードを管理
-* output：出力ファイルを管理
+- `docs`：要求定義書、設計書などを管理
+- `sample`：サンプルCSVや出力例を管理
+- `src`：Pythonソースコードを管理
+- `tests`：今後追加するテストコードを管理
+- `logs`：処理日時、処理状況、エラーなどを記録したログファイルを管理
+- `output`：生成したExcelファイルを管理
 
 ### English
 
-* docs: Project documents such as requirements and design notes
-* sample: Sample CSV files and output examples
-* src: Python source code
-* tests: Test code
-* output: Generated output files
+- `docs`: Project documents such as requirements and design notes
+- `sample`: Sample CSV files and output examples
+- `src`: Python source code
+- `tests`: Test code to be added
+- `logs`: Log files containing processing times, status, and errors
+- `output`: Generated Excel files
 
-## Version History（バージョン履歴）
+---
+
+## Development History（開発履歴）
 
 ### 日本語
 
-| Version|内容|
-| --------- | ------------- |
+| Version | 内容 |
+| --- | --- |
 | v0.1.0 | README作成・プロジェクト初期構成作成 |
-| v0.2.0 | 要求定義書作成予定 |
-| v0.3.0 | 基本設計書作成予定 |
+| v0.2.0 | 要求定義・基本設計ドキュメントを作成 |
+| v0.3.0 | CSV読み込み機能を実装 |
+| v0.4.0 | データ整形・Excel出力機能を実装 |
+| v0.5.0 | ターミナルおよびログファイルへのログ出力機能を実装 |
 
 ### English
 
 | Version | Description |
-| --------- | ------------- |
+| --- | --- |
 | v0.1.0 | Created README and initial project structure |
-| v0.2.0 | Planned requirements document |
-| v0.3.0 | Planned basic design document |
+| v0.2.0 | Created requirements and basic design documentation |
+| v0.3.0 | Implemented the CSV import feature |
+| v0.4.0 | Implemented data formatting and Excel export features |
+| v0.5.0 | Implemented terminal and file logging |
+
+---
 
 ## License（ライセンス）
 
@@ -258,16 +230,4 @@ This project is planned to use the MIT License.
 
 ## Author（作者）
 
-### 日本語
-
 Florian Seto
-
-GitHub Profile:
-https://github.com/florianseto
-
-### English
-
-Developed by Florian Seto.
-
-GitHub Profile:
-https://github.com/florianseto

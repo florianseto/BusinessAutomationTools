@@ -11,6 +11,7 @@ from pathlib import Path
 from csv_reader import read_csv
 from data_formatter import remove_columns, rename_columns, reorder_columns
 from excel_writer import write_excel
+from logging_config import setup_logging
 
 logger = logging.getLogger(__name__)
 
@@ -21,6 +22,9 @@ def main() -> None:
 
     # main.pyの位置を基準にプロジェクトフォルダを取得する
     project_dir = Path(__file__).resolve().parent.parent
+
+    # ターミナルおよびログファイルへのログ出力を設定する
+    log_file_path = setup_logging(project_dir)
 
     # 読み込み対象のサンプルCSVファイルパスを指定する
     input_file_path = project_dir / "sample" / "input" / "sample.csv"
@@ -53,7 +57,11 @@ def main() -> None:
         "勤務時間数"
     ]
 
-    logger.info(f"CSV Business Formatterのメイン処理を開始します: input_file={input_file_path}")
+    logger.info(
+        f"CSV Business Formatterのメイン処理を開始します: "
+        f"input_file={input_file_path}, output_file={output_file_path}, "
+        f"log_file={log_file_path}"
+    )
 
     try:
         # CSVファイルを読み込む
