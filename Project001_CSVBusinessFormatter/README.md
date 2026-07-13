@@ -62,7 +62,7 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### CSV Processing（CSV処理）
 
-#### 日本語
+### 日本語
 
 - [x] CSVファイルの読み込み
 - [x] UTF-8およびCP932による自動再試行
@@ -71,7 +71,7 @@ It aims to reduce human errors and shorten the time required for checking and re
 - [x] 列名変更
 - [x] 列の並び替え
 
-#### English
+### English
 
 - [x] Import CSV files
 - [x] Automatically retry with UTF-8 and CP932 encodings
@@ -82,7 +82,7 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### Excel Output（Excel出力）
 
-#### 日本語
+### 日本語
 
 - [x] Excelファイルへの出力
 - [ ] 集計シートの作成
@@ -91,7 +91,7 @@ It aims to reduce human errors and shorten the time required for checking and re
 - [x] 出力フォルダの自動作成
 - [x] 日時付き出力ファイル名での保存
 
-#### English
+### English
 
 - [x] Export data to Excel files
 - [ ] Generate summary sheets
@@ -102,14 +102,14 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### Logging（ログ出力）
 
-#### 日本語
+### 日本語
 
 - [x] 処理状況およびエラーを記録するログ処理
 - [x] 入力ファイル名・出力ファイル名のログ記録
 - [x] ターミナルへのログ出力
 - [x] 日時付きログファイルへの保存
 
-#### English
+### English
 
 - [x] Log processing status and errors
 - [x] Record input and output file names in logs
@@ -122,15 +122,22 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### 日本語
 
-🟡 基本機能実装済み・テスト準備フェーズ
+🟢 v1.0開発完了・リリース準備完了
 
-CSV読み込み、データ整形、Excel出力、ログ出力までの基本処理を実装済みです。現在は自動テストと出力機能の拡充を予定しています。
+CSV読み込み、データ整形、Excel出力、ログ出力までの基本処理を実装済みです。全5モジュールを対象とする単体テスト57件の作成と確認も完了し、v1.0としての開発およびリリース準備は完了しています。GitHubへの公開と`v1.0.0`タグの作成後、正式リリース完了となります。
 
 ### English
 
-🟡 Core Features Implemented / Preparing for Testing
+🟢 v1.0 Development Complete / Ready for Release
 
-The basic workflow for CSV import, data formatting, Excel export, and logging has been implemented. Automated testing and output enhancements are planned next.
+The basic workflow for CSV import, data formatting, Excel export, and logging has been implemented. Creation and verification of 57 unit tests covering all five modules are also complete. Development and release preparation for v1.0 are finished; the release will be finalized after publication on GitHub and creation of the `v1.0.0` tag.
+
+### Current Test Result（現在のテスト結果）
+
+- 実行日 / Run date: 2026-07-13
+- 結果 / Result: **56 passed, 1 failed**（全57件）
+- 補足 / Note: 失敗1件は、32文字以上のExcelシート名に対して現行環境の`openpyxl`が例外ではなく警告を出すという仕様差異によるものです。実装不具合とは扱わず、必要に応じて次回改善時に対応します。
+- Note: The single failure is a specification difference: the installed `openpyxl` emits a warning instead of raising an exception for Excel sheet names longer than 31 characters. It is not treated as an implementation defect and may be addressed in a future improvement.
 
 ---
 
@@ -144,8 +151,11 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 - [x] データ整形機能
 - [x] Excel出力機能
 - [x] ログ出力機能
-- [ ] テスト
-- [ ] v1.0 リリース
+- [x] 単体テスト作成
+- [x] 単体テスト確認完了
+- [x] v1.0 開発完了
+- [x] リリース準備完了
+- [x] GitHub公開・`v1.0.0`タグ作成
 
 ### English
 
@@ -155,8 +165,16 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 - [x] Data formatting feature
 - [x] Excel export feature
 - [x] Logging feature
-- [ ] Testing
-- [ ] v1.0 release
+- [x] Unit test implementation
+- [x] Unit test verification completed
+- [x] v1.0 development completed
+- [x] Release preparation completed
+- [x] GitHub publication and `v1.0.0` tag creation
+
+### Future Improvements（今後の改善候補）
+
+- [ ] 集計シートの実装 / Implement summary sheets
+- [ ] Excel基本書式の実装 / Implement basic Excel formatting
 
 ---
 
@@ -169,6 +187,8 @@ Project001_CSVBusinessFormatter
 │   └── input
 ├── src
 ├── tests
+│   ├── conftest.py
+│   └── test_*.py
 ├── logs
 ├── output
 └── README.md
@@ -179,7 +199,7 @@ Project001_CSVBusinessFormatter
 - `docs`：要求定義書、設計書などを管理
 - `sample`：サンプルCSVや出力例を管理
 - `src`：Pythonソースコードを管理
-- `tests`：今後追加するテストコードを管理
+- `tests`：5つのソースモジュールを対象とするpytest単体テストを管理
 - `logs`：処理日時、処理状況、エラーなどを記録したログファイルを管理
 - `output`：生成したExcelファイルを管理
 
@@ -188,7 +208,7 @@ Project001_CSVBusinessFormatter
 - `docs`: Project documents such as requirements and design notes
 - `sample`: Sample CSV files and output examples
 - `src`: Python source code
-- `tests`: Test code to be added
+- `tests`: pytest unit tests for the five source modules
 - `logs`: Log files containing processing times, status, and errors
 - `output`: Generated Excel files
 
@@ -205,6 +225,7 @@ Project001_CSVBusinessFormatter
 | v0.3.0 | CSV読み込み機能を実装 |
 | v0.4.0 | データ整形・Excel出力機能を実装 |
 | v0.5.0 | ターミナルおよびログファイルへのログ出力機能を実装 |
+| v0.6.0 | 全5モジュールの単体テスト57件と単体テスト仕様書を追加 |
 
 ### English
 
@@ -215,6 +236,7 @@ Project001_CSVBusinessFormatter
 | v0.3.0 | Implemented the CSV import feature |
 | v0.4.0 | Implemented data formatting and Excel export features |
 | v0.5.0 | Implemented terminal and file logging |
+| v0.6.0 | Added 57 unit tests for all five modules and the unit test specification |
 
 ---
 

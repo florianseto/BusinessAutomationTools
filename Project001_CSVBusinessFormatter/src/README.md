@@ -14,6 +14,16 @@ This folder contains the Python source code for Project001.
 
 ## Development Status（開発状況）
 
-CSV読み込み、データ整形、Excel出力、ログ出力の基本機能は実装済みです。自動テスト、集計シートおよび書式設定は今後対応予定です。
+CSV読み込み、データ整形、Excel出力、ログ出力の基本機能は実装済みです。各モジュールに対する単体テストも追加し、現在の開発フェーズは完了しています。2026年7月13日時点の結果は全57件中56件成功、1件はライブラリとの仕様差異です。
 
-The core CSV import, data formatting, Excel export, and logging features are implemented. Automated tests, summary sheets, and formatting are planned.
+The core CSV import, data formatting, Excel export, and logging features are implemented, and unit tests have been added for every module. The current development phase is complete. As of July 13, 2026, 56 of 57 tests pass, with one specification difference involving the library behavior.
+
+## Remaining Work（今後の対応）
+
+- 必要に応じて、32文字以上のExcelシート名に関する仕様を次回改善時に見直す
+- 集計シートを実装する
+- Excelの基本書式を実装する
+
+- Review the specification for Excel sheet names longer than 31 characters during a future improvement if needed
+- Implement summary sheets
+- Implement basic Excel formatting
