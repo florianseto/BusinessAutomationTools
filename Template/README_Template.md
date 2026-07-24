@@ -140,7 +140,7 @@ Remove unnecessary sections if they are not required.
 
 ### 日本語
 
-🟡 要求定義・設計フェーズ
+🟡 要件定義・設計フェーズ
 （🟡設計 / 🟢開発 / 🔵テスト / 🟣リリース）
 
 ### English
@@ -153,7 +153,7 @@ Remove unnecessary sections if they are not required.
 
 ### 日本語
 
-- [ ] 要求定義
+- [ ] 要件定義
 
 - [ ] 基本設計
 
@@ -195,7 +195,7 @@ Remove unnecessary sections if they are not required.
 
 ### 日本語
 
-* docs：要求定義書、設計書などを管理
+* docs：要件定義書、設計書などを管理
 * src：ソースコードを管理
 * tests：テストコードを管理
 * output：出力ファイルを管理

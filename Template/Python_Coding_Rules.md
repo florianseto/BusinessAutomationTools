@@ -593,7 +593,7 @@ For overseas projects, comments, docstrings, log messages, and user messages may
 
 Business Automation Toolsシリーズでは以下の順で開発を行います。
 
-1. 要求定義
+1. 要件定義
 2. 基本設計
 3. コーディング
 4. 単体テスト

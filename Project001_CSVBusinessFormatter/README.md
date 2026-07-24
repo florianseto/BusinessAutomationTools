@@ -145,7 +145,7 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 
 ### 日本語
 
-- [x] 要求定義
+- [x] 要件定義
 - [x] 基本設計
 - [x] CSV読み込み機能
 - [x] データ整形機能
@@ -196,7 +196,7 @@ Project001_CSVBusinessFormatter
 
 ### 日本語
 
-- `docs`：要求定義書、設計書などを管理
+- `docs`：要件定義書、設計書などを管理
 - `sample`：サンプルCSVや出力例を管理
 - `src`：Pythonソースコードを管理
 - `tests`：5つのソースモジュールを対象とするpytest単体テストを管理
@@ -221,7 +221,7 @@ Project001_CSVBusinessFormatter
 | Version | 内容 |
 | --- | --- |
 | v0.1.0 | README作成・プロジェクト初期構成作成 |
-| v0.2.0 | 要求定義・基本設計ドキュメントを作成 |
+| v0.2.0 | 要件定義・基本設計ドキュメントを作成 |
 | v0.3.0 | CSV読み込み機能を実装 |
 | v0.4.0 | データ整形・Excel出力機能を実装 |
 | v0.5.0 | ターミナルおよびログファイルへのログ出力機能を実装 |
