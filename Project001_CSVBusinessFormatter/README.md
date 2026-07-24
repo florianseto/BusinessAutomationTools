@@ -122,15 +122,15 @@ It aims to reduce human errors and shorten the time required for checking and re
 
 ### 日本語
 
-🟢 v1.0開発完了・リリース準備完了
+🟢 v1.0正式リリース完了
 
-CSV読み込み、データ整形、Excel出力、ログ出力までの基本処理を実装済みです。全5モジュールを対象とする単体テスト57件の作成と確認も完了し、v1.0としての開発およびリリース準備は完了しています。GitHubへの公開と`v1.0.0`タグの作成後、正式リリース完了となります。
+CSV読み込み、データ整形、Excel出力、ログ出力までの基本処理を実装し、`v1.0.0`として正式公開しています。全5モジュールを対象とする単体テスト57件の作成と確認も完了しています。
 
 ### English
 
-🟢 v1.0 Development Complete / Ready for Release
+🟢 v1.0 Official Release Complete
 
-The basic workflow for CSV import, data formatting, Excel export, and logging has been implemented. Creation and verification of 57 unit tests covering all five modules are also complete. Development and release preparation for v1.0 are finished; the release will be finalized after publication on GitHub and creation of the `v1.0.0` tag.
+The basic workflow for CSV import, data formatting, Excel export, and logging has been implemented and officially released as `v1.0.0`. Creation and verification of 57 unit tests covering all five modules are also complete.
 
 ### Current Test Result（現在のテスト結果）
 
@@ -153,7 +153,7 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 - [x] 単体テスト確認完了
 - [x] v1.0 開発完了
 - [x] リリース準備完了
-- [ ] GitHub公開・`v1.0.0`タグ作成
+- [x] GitHub公開・`v1.0.0`タグ作成
 
 ### English
 
@@ -167,7 +167,7 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 - [x] Unit test verification completed
 - [x] v1.0 development completed
 - [x] Release preparation completed
-- [ ] GitHub publication and `v1.0.0` tag creation
+- [x] GitHub publication and `v1.0.0` tag creation
 
 ### Future Improvements（今後の改善候補）
 
