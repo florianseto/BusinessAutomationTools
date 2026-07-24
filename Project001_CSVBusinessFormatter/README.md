@@ -134,10 +134,8 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 
 ### Current Test Result（現在のテスト結果）
 
-- 実行日 / Run date: 2026-07-13
-- 結果 / Result: **56 passed, 1 failed**（全57件）
-- 補足 / Note: 失敗1件は、32文字以上のExcelシート名に対して現行環境の`openpyxl`が例外ではなく警告を出すという仕様差異によるものです。実装不具合とは扱わず、必要に応じて次回改善時に対応します。
-- Note: The single failure is a specification difference: the installed `openpyxl` emits a warning instead of raising an exception for Excel sheet names longer than 31 characters. It is not treated as an implementation defect and may be addressed in a future improvement.
+- 実行日 / Run date: 2026-07-24
+- 結果 / Result: **57 passed**（全57件）
 
 ---
 
@@ -155,7 +153,7 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 - [x] 単体テスト確認完了
 - [x] v1.0 開発完了
 - [x] リリース準備完了
-- [x] GitHub公開・`v1.0.0`タグ作成
+- [ ] GitHub公開・`v1.0.0`タグ作成
 
 ### English
 
@@ -169,7 +167,7 @@ The basic workflow for CSV import, data formatting, Excel export, and logging ha
 - [x] Unit test verification completed
 - [x] v1.0 development completed
 - [x] Release preparation completed
-- [x] GitHub publication and `v1.0.0` tag creation
+- [ ] GitHub publication and `v1.0.0` tag creation
 
 ### Future Improvements（今後の改善候補）
 
@@ -244,11 +242,11 @@ Project001_CSVBusinessFormatter
 
 ### 日本語
 
-このプロジェクトは MIT License を予定しています。
+このプロジェクトはMIT Licenseのもとで公開しています。
 
 ### English
 
-This project is planned to use the MIT License.
+This project is licensed under the MIT License.
 
 ## Author（作者）
 

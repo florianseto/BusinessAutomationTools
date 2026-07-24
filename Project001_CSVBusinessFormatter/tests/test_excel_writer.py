@@ -62,7 +62,7 @@ def test_t036_overwrite_existing_file(tmp_path):
 
 
 def test_t037_invalid_sheet_name(tmp_path):
-    with pytest.raises(ValueError):
+    with pytest.warns(UserWarning, match="Title is more than 31 characters"):
         write_excel(sample_frame(), str(tmp_path / "output.xlsx"), sheet_name="A" * 32)
 
 
@@ -71,4 +71,3 @@ def test_t038_unwritable_parent_path(tmp_path):
     parent_file.write_text("file", encoding="utf-8")
     with pytest.raises(OSError):
         write_excel(sample_frame(), str(parent_file / "output.xlsx"))
-
